@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import 'detailscreen.dart';
-import 'model/user.dart';
+import '../model/user.dart';
 
 class Homescreen extends StatefulWidget {
   final String? token;

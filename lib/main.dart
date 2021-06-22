@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:knovator/login.dart';
-import 'package:knovator/signin.dart';
+import 'package:knovator/screens/authentication/login.dart';
+import 'package:knovator/screens/authentication/signin.dart';
 
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue,
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: MyHomePage(),
     );
   }
 }
