@@ -48,21 +48,14 @@ class _HomescreenState extends State<Homescreen> {
         headers: headers);
     print(response.statusCode);
     if (response.statusCode == 200) {
-      print(jsonDecode(response.body)['result']);
+    
       return jsonDecode(response.body)['result'];
     } else {
-      // throw Exception('failed to load the data');
+   
       print('Something went wrong');
     }
   }
 
-  OutlineInputBorder border() {
-    return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(
-        10,
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {

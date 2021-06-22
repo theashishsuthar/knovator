@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passcontroller = TextEditingController();
   GlobalKey<FormState> _key = GlobalKey();
-  OutlineInputBorder border() {
+  OutlineInputBorder inlineBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(
         10,
@@ -87,9 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 });
           }
-          
         } else {
-          
           return showDialog(
               context: context,
               builder: (BuildContext context) {
@@ -165,12 +163,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   }
                 },
                 decoration: InputDecoration(
-                  focusedBorder: border(),
+                  focusedBorder: inlineBorder(),
                   labelText: 'Email',
-                  border: border(),
-                  errorBorder: border(),
-                  enabledBorder: border(),
-                  hintText: "Email",
+                  border: inlineBorder(),
+                  errorBorder: inlineBorder(),
+                  enabledBorder: inlineBorder(),
+                  hintText: "Enter your email",
                 ),
               ),
             ),
@@ -189,11 +187,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 // maxLength: 8,
                 decoration: InputDecoration(
                   errorMaxLines: 2,
-                  focusedBorder: border(),
+                  focusedBorder: inlineBorder(),
                   labelText: "password",
-                  errorBorder: border(),
-                  border: border(),
-                  enabledBorder: border(),
+                  errorBorder: inlineBorder(),
+                  border: inlineBorder(),
+                  enabledBorder: inlineBorder(),
                   hintText: "Enter your password",
                 ),
               ),
