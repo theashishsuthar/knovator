@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:knovator/screens/authentication/login.dart';
+
 import 'package:knovator/screens/authentication/signin.dart';
+
+import 'constraint.dart';
 
 
 void main() {
@@ -17,8 +19,8 @@ class MyApp extends StatelessWidget {
       title: 'Knovator',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.blue,
-        primarySwatch: Colors.blue,
+        primaryColor: kPrimaryColor,
+        
       ),
       home: MyHomePage(),
     );
