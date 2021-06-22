@@ -86,10 +86,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 });
           }
-          print(res.body);
+         
         } else {
-          print(res.statusCode);
-          print('failed');
+          
           return showDialog(
               context: context,
               builder: (BuildContext context) {
