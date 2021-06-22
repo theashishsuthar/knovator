@@ -40,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return regExp.hasMatch(pass!);
   }
-
-  login() async {
+  //Sign in method
+  signin() async {
     if (_key.currentState!.validate()) {
       try {
         _key.currentState!.save();
@@ -197,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              onPressed: login,
+              onPressed: signin,
               child: Text(
                 'LOGIN',
               ),

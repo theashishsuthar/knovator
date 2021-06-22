@@ -6,7 +6,6 @@ import 'package:http/http.dart' as http;
 import 'detailscreen.dart';
 import 'model/user.dart';
 
-
 class Homescreen extends StatefulWidget {
   final String? token;
 
@@ -36,7 +35,6 @@ class _HomescreenState extends State<Homescreen> {
       'Content-Type': 'application/json; charset=UTF-8',
       'Host': '44.238.77.66:8082',
       'X-Access-Token': "${widget.token}",
-    
     };
 
     //Making http request
@@ -48,20 +46,20 @@ class _HomescreenState extends State<Homescreen> {
         headers: headers);
     print(response.statusCode);
     if (response.statusCode == 200) {
-    
       return jsonDecode(response.body)['result'];
     } else {
-   
       print('Something went wrong');
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu,color: Colors.black,),
+        leading: Icon(
+          Icons.menu,
+          color: Colors.black,
+        ),
         backgroundColor: Colors.white,
         elevation: 1,
         title: Text(
@@ -74,12 +72,11 @@ class _HomescreenState extends State<Homescreen> {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height*0.02,
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
           Expanded(
             child: Container(
               color: Colors.white,
-             
               child: FutureBuilder(
                   future: findUser(),
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
